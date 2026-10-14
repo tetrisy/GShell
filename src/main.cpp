@@ -11,7 +11,12 @@ int main() {
     std::string userCommand {};
 
     std::getline(std::cin, userCommand);
-    std::cout << userCommand << ": command not found" << std::endl;
+
+    if (userCommand == "exit") {
+      break;
+    } else {
+      std::cout << userCommand << ": command not found" << std::endl;
+    }
   }
 
   return 0;
